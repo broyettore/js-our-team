@@ -1,0 +1,85 @@
+/********** RESET ************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #004043;
+    color: #069993;
+    font-family: 'Roboto', sans-serif;
+}
+
+.body-light-theme {                                    /*****   <--- this class should stay after body for the theme switch to work ****/
+    background-color: #e8effc;
+    color: #624ce0;
+}
+
+
+/************ COMMON ************/
+
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+
+/************ HEADER ************/
+
+header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+header button {
+    border: 0;
+    background-color: transparent;
+}
+
+header button i {
+    color: #069993;
+    font-size: 1.8rem;
+}
+
+.fa-toggle-off {
+    color: #624ce0;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    padding: 10px;
+    margin: 10px;
+}
+
+header h1 {
+    font-size: 1.6rem;
+}
+
+/************ MAIN ************/
+
+main {
+    height: calc(100vh - 80px);
+}
+
+main > .container {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

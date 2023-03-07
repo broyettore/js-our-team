@@ -71,3 +71,6 @@ const teamInfo = [
     }
 ]
 
+for (let i = 0; i < teamInfo.length; i++) {
+    console.log(teamInfo[i]);
+}

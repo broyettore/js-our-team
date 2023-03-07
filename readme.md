@@ -41,4 +41,4 @@ Organizzare i singoli membri in card/schede.
 * Creo un ciclo che durerà quanto il numero di oggetti nell'array.
 * Questo ciclo mi permetterà di creare 5 contenitori per le nostre info.
 * L'obiettivo è quello di stampare alla fine di ogni ciclo le info contenute negli oggetti all'interno dei 5 contenitori.
-* Un contenitore dovrà avere al suo interno le info di un oggetto.
+* Ogni contenitore dovrà avere al suo interno le info di un oggetto.

@@ -2,7 +2,7 @@
 
 /********* DARK/LIGHT THEME********** */
 const themeBtn = document.querySelector(".fa-toggle-on");
-const body = document.querySelector(".body")
+const body = document.querySelector(".body");
 
 themeBtn.addEventListener("click", showDarkTheme);
 
@@ -11,66 +11,77 @@ function showDarkTheme() {
     themeBtn.classList.toggle("fa-toggle-off");
     themeBtn.classList.toggle("fa-toggle-on");
     body.classList.toggle("body-light-theme");
+    cardContainerSelect.classList.toggle("card-light-theme")
 }
 
 /************* EXERCISE STARTS HERE ************ */
-// MILESTONE 0:
-// Creare l’array di oggetti con le informazioni fornite.
 
-// MILESTONE 1:
-// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto.
+/***** VARIABILI *******/
+const cardContainer = document.querySelector(".ctn-card");
 
-// MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe.
+for (let i = 0; i < 6; i++) {
+    /***** html elements creation ******/
+    const card = document.createElement("li");
+    card.classList.add("card");
+    cardContainer.append(card);
+    const cardTop = document.createElement("div");
+    cardTop.classList.add("card-top");
+    card.append(cardTop);
+    const cardBottom = document.createElement("div");
+    cardBottom.classList.add("card-bottom");
+    card.append(cardBottom);
 
-// BONUS 1:
-// Trasformare la stringa foto in una immagine effettiva.
-
-// BONUS 2:
-// Organizzare i singoli membri in card/schede.
-
-// Scott Estrada	Developer	scott-estrada-developer.jpg
-// Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg -->
-
-const teamInfo = [
-
-    {
-        "nome" : "Wayne Barnett",
-        "ruolo": "Founder & Ceo",
-        "image": `<img src="assets/img/lol.jpg" alt="">`
-    },
-    
-    {
-        "nome" : "Angela Caroli",
-        "ruolo": "Chief Editor",
-        "image": `<img src="assets/img/lol}.jpg" alt="">`
-    },
-
-    {
-        "nome" : "Walter Gordon",
-        "ruolo": "Office Manager",
-        "image": `<img src="assets/img/lol}.jpg" alt="">`
-    },
-
-    {
-        "nome" : "Angela Lopez",
-        "ruolo": "Social Media Manager",
-        "image": `<img src="assets/img/lol}.jpg" alt="">`
-    },
-
-    {
-        "nome" : "Scott Estrada",
-        "ruolo": "Developer",
-        "image": `<img src="assets/img/lol}.jpg" alt="">`
-    },
-
-    {
-        "nome" : "Barbara Ramos",
-        "ruolo": "Graphic Designer",
-        "image": `<img src="assets/img/lol}.jpg" alt="">`
-    }
-]
-
-for (let i = 0; i < teamInfo.length; i++) {
-    console.log(teamInfo[i]);
 }
+
+/*******select html elements ***** */
+const cardTopSelect = document.querySelectorAll(".card-top");
+const cardBottomSelect = document.querySelectorAll(".card-bottom");
+const cardContainerSelect = document.querySelector(".ctn-card")
+
+for (let i = 0; i < 6; i++) {
+    const teamInfo = [
+
+        {
+            "nome" : `<h3>Wayne Barnett</h3>`,
+            "ruolo": `<h4>Founder & Ceo</h4>`,
+            "image": `<img src="assets/img/${i}.jpg" alt="">`
+        },
+        
+        {
+            "nome" : `<h3>Angela Caroli</h3>`,
+            "ruolo": `<h4>Chief Editor</h4>`,
+            "image": `<img src="assets/img/${i}.jpg" alt="">`
+        },
+    
+        {
+            "nome" : `<h3>Walter Gordon</h3>`,
+            "ruolo": `<h4>Office Manager</h4>`,
+            "image": `<img src="assets/img/${i}.jpg" alt="">`
+        },
+    
+        {
+            "nome" : `<h3>Angela Lopez</h3>`,
+            "ruolo": `<h4>Social Media Manager</h4>`,
+            "image": `<img src="assets/img/${i}.jpg" alt="">`
+        },
+    
+        {
+            "nome" : `<h3>Scott Estrada</h3>`,
+            "ruolo": `<h4>Developer</h4>`,
+            "image": `<img src="assets/img/${i}.jpg" alt="">`
+        },
+    
+        {
+            "nome" : `<h3>Barbara Ramos</h3>`,
+            "ruolo": `<h4>Graphic Designer</h4>`,
+            "image": `<img src="assets/img/${i}.jpg" alt="">`
+        }
+    ]
+
+    cardTopSelect[i].innerHTML += teamInfo[i].image;
+    cardBottomSelect[i].innerHTML += teamInfo[i].nome + teamInfo[i].ruolo;
+}
+
+
+
+

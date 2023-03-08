@@ -94,7 +94,7 @@ main h2 {
     margin: 10px 0;
     font-size: 2rem;
     opacity: 0;
-    animation: fadeInTilte 1s linear forwards 1s;
+    animation: fadeInTilte 1s linear forwards .50s;
 }
 
 
@@ -105,7 +105,7 @@ main > div  {
 
 main span {
     opacity: 0;
-    animation: fadeInTilte 1s linear forwards 1s;
+    animation: fadeInTilte 1s linear forwards .50s;
 }
 
 @keyframes fadeInTilte {
@@ -137,9 +137,10 @@ main > .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: fadeIn 1s linear forwards 1.7s;
+    animation: fadeIn 1s linear forwards 2s;
     opacity: 0;
 }
+
 
  @keyframes fadeIn {
     0% {
